@@ -1,13 +1,157 @@
 ﻿<Page
     x:Class="PanelExample.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:toolkits="using:WinRTXamlToolkit.Tools"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PanelExample"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid>
+        <Rectangle Fill="#AAAAAA"/>
+        <Rectangle Fill="#777777" Width="1000" Height="450"/>
+        <Rectangle Fill="#333333" Width="600" Height="200"/>
     </Grid>
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#EEEEEE" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+        <Rectangle Fill="#BBBBBB" Grid.Row="0" Grid.Column="4" Grid.RowSpan="4"/>
+        <Rectangle Fill="#888888" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <Rectangle Fill="#555555" Grid.Row="1" Grid.Column="0" Grid.RowSpan="4"/>
+
+        <Rectangle Fill="#BBBBBB" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#888888" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2"/>
+        <Rectangle Fill="#555555" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#EEEEEE" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2"/>
+
+        <Rectangle Fill="#333333" Grid.Row="2" Grid.Column="2"/>
+    </Grid>-->
+
+    <!--
+        Orientation 預設為垂直
+        HorizontalAlignment 預設為 Center
+        VerticalAlignment 預設為 Center
+    -->
+    <!--<StackPanel Background="White">
+        <Rectangle Fill="#AAAAAA"/>
+        <Rectangle Fill="#777777" Width="400" Height="400"/>
+        <Rectangle Fill="#333333" Width="150" Height="150"/>
+    </StackPanel>-->
+
+    <!--<StackPanel Background="White" Orientation="Horizontal">
+        <Rectangle Fill="#AAAAAA" Width="200" Height="200"/>
+        <Rectangle Fill="#777777" Width="200" Height="200"/>
+        <Rectangle Fill="#333333" Width="200" Height="200"/>
+        <Rectangle Fill="#FF3333" Width="200" Height="200"/>
+        <Rectangle Fill="#00AED8" Width="200" Height="200"/>
+        <Rectangle Fill="#DDDD66" Width="200" Height="200"/>
+    </StackPanel>-->
+
+    <!--
+        沒有 Orientation 屬性，需描述絕對位置
+        HorizontalAlignment 預設為 Left
+        VerticalAlignment 預設為 Top
+    -->
+    <!--<Canvas>
+        <Rectangle Fill="#CCCCCC" Width="600" Height="600" Canvas.Left="50" Canvas.Top="50"/>
+        <Rectangle Fill="#777777" Width="350" Height="350" Canvas.Left="350" Canvas.Top="350"/>
+        <Rectangle Fill="#333333" Width="200" Height="200" Canvas.Left="250" Canvas.Top="250"/>
+    </Canvas>-->
+    
+    <!--<ListView>
+        <ListViewItem>
+            <Rectangle Fill="#AAAAAA" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#777777" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#333333" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#FF6666" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#00AED8" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#DDDD66" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#666600" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#FF3366" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#AAAAAA" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#777777" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#333333" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#FF6666" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#00AED8" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#DDDD66" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#666600" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#FF3366" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#AAAAAA" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#777777" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#333333" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#FF6666" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#00AED8" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#DDDD66" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#666600" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListViewItem>
+            <Rectangle Fill="#FF3366" Width="200" Height="200"/>
+        </ListViewItem>
+        <ListView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapGrid Orientation="Horizontal" />
+                --><!--<StackPanel/>--><!--
+            </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+    </ListView>-->
+    
 </Page>
