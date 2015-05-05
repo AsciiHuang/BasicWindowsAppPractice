@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,31 @@ namespace PageLifeCycleExample
         public MainPage()
         {
             this.InitializeComponent();
+            Debug.WriteLine("Create MainPage :: " + this.GetHashCode());
+            //NavigationCacheMode = NavigationCacheMode.Enabled;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            Debug.WriteLine("MainPage On Navigated To");
+        }
+
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+            Debug.WriteLine("MainPage On Navigating From");
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            Debug.WriteLine("MainPage On Navigated From");
+        }
+
+        private void OnNavigateButtonClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SecondPage), "It's parameter");
         }
     }
 }

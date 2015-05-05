@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Button Content="Navigate To Second Page" 
+                HorizontalAlignment="Center"
+                Click="OnNavigateButtonClick"/>
     </Grid>
 </Page>
