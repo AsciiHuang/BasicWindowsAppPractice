@@ -25,6 +25,14 @@ namespace DataBindingExample
         public MainPage()
         {
             this.InitializeComponent();
+            Model = new MainModel();
+            this.DataContext = Model;
+        }
+
+        public MainModel Model
+        {
+            get;
+            set;
         }
     }
 }

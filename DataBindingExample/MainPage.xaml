@@ -8,6 +8,26 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="100" HorizontalAlignment="Center">
+            <TextBlock Text="DataBinding Sample" FontSize="30"/>
+            <TextBlock Margin="10"
+                       Text="{Binding TextProperty}" 
+                       Foreground="{Binding BrushProperty}" 
+                       FontSize="{Binding IntegerProperty}"/>
+            <Image Margin="10" 
+                   Source="{Binding BitmapProperty}"/>
+            <Image Margin="10" 
+                   Source="{Binding StringURIProperty}"/>
+            <TextBlock Margin="10"
+                       Text="{Binding ObjectProperty}"
+                       FontSize="20"/>
+            <TextBlock Margin="10"
+                       Text="{Binding ObjectProperty.Description}"
+                       FontSize="20"/>
+        </StackPanel>
     </Grid>
 </Page>
