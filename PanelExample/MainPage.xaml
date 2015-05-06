@@ -48,7 +48,7 @@
         VerticalAlignment 預設為 Center
     -->
     <!--<StackPanel Background="White">
-        <Rectangle Fill="#AAAAAA"/>
+        <Rectangle Fill="#AAAAAA" Width="100" Height="100"/>
         <Rectangle Fill="#777777" Width="400" Height="400"/>
         <Rectangle Fill="#333333" Width="150" Height="150"/>
     </StackPanel>-->
