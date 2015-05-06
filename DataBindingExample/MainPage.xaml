@@ -13,7 +13,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Margin="100" HorizontalAlignment="Center">
-            <TextBlock Text="DataBinding Sample" FontSize="30"/>
+            <TextBlock Text="DataBinding Sample" 
+                       FontSize="30"/>
             <TextBlock Margin="10"
                        Text="{Binding TextProperty}" 
                        Foreground="{Binding BrushProperty}" 
@@ -29,5 +30,31 @@
                        Text="{Binding ObjectProperty.Description}"
                        FontSize="20"/>
         </StackPanel>
+        <ListView Grid.Column="1" 
+                  ItemsSource="{Binding ListDatas}"
+                  Margin="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="0" 
+                                   Fill="{Binding ColorIcon}" 
+                                   Width="100" Height="100"/>
+                        <StackPanel Grid.Column="1" 
+                                    Orientation="Vertical"
+                                    Margin="10, 0, 0, 0">
+                            <TextBlock Text="{Binding Title}" 
+                                       FontSize="40"/>
+                            <TextBlock Text="{Binding Description}" 
+                                       FontSize="28" 
+                                       Foreground="Gray"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

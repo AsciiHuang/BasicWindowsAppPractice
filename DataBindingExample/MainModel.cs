@@ -19,6 +19,12 @@ namespace DataBindingExample
             BitmapProperty = new BitmapImage(new Uri("https://assets.onestore.ms/cdnfiles/onestorerolling-1504-30011/shell/v1_1/images/logo/microsoft.png"));
             StringURIProperty = "https://i-msdn.sec.s-msft.com/dynimg/IC733879.jpg";
             ObjectProperty = new CustomData("Data Title", "Data Description");
+            List<CustomData> datas = new List<CustomData>();
+            for(int i = 0; i < 50; ++i)
+            {
+                datas.Add(new CustomData(String.Format("Title {0}", i), String.Format("Description {0}", i)));
+            }
+            ListDatas = datas;
         }
 
         public String TextProperty
